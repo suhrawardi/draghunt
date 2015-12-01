@@ -20,7 +20,7 @@ module Draghunt
     def all_stats
       git_stats.inject([]) do |m, (k, v)|
         m << [k, v, cloc_stats[k]] if cloc_stats.key?(k); m
-      end.sort { |x, y| y[1] <=> x[1] }
+      end.sort { |x, y| x[1] <=> y[1] }
     end
 
     def self.print
